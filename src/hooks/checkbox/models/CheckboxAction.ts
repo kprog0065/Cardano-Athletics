@@ -1,0 +1,3 @@
+export type CheckboxActionType = 'CHECKBOX_ACTION_CHANGE' | 'CHECKBOX_ACTION_CLEAR';
+export const CHECKBOX_ACTION_CHANGE: CheckboxActionType = 'CHECKBOX_ACTION_CHANGE';
+export const CHECKBOX_ACTION_CLEAR: CheckboxActionType = 'CHECKBOX_ACTION_CLEAR';
