@@ -1,0 +1,44 @@
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+    env_file:
+      - ./backend/.env
+    command: sh -c "npm install && npm start"
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    command: sh -c "npm install && npm start"
+    depends_on:
+      - backend
+
+  nft:
+    build: ./nft
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nft:/app
+    command: sh -c "npm install && npm run dev"
+    depends_on:
+      - frontend
+
+volumes:
+  mongo-data:
+    driver: local
