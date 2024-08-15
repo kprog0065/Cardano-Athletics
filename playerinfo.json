@@ -1,0 +1,51 @@
+{
+    "playerInfo": {
+        "shooting": "",
+        "passing": "",
+        "dribbling": "",
+        "defending": "",
+        "Physical": "",
+        "pace": ""
+    },
+    "pace": {
+        "sprintSpeed": "",
+        "acceleration": ""
+    },
+    "shooting": {
+        "finishing": "",
+        "attPosition": "",
+        "shotPower": "",
+        "longShots": "",
+        "penalaties": "",
+        "volleys": ""
+    },
+    "passing": {
+        "vision": "",
+        "crossing": "",
+        "fkAcc": "",
+        "longPass": "",
+        "shortPass": "",
+        "curve": ""
+    },
+    "dribbling": {
+        "agility": "",
+        "balance": "",
+        "reactions": "",
+        "composure": "",
+        "ballControl": "",
+        "dribbling": ""
+    },
+    "defending": {
+        "interceptions": "",
+        "headingAcc": "",
+        "defAware": "",
+        "standTackle": "",
+        "sildeTackle": ""
+    },
+    "Physical": {
+        "jumping": "",
+        "stamina": "",
+        "strength": "",
+        "aggression": ""
+    }
+}

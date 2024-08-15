@@ -34,7 +34,7 @@ export const signin = async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ message: "Somthing went wrong" });
-    console.log(error);
+
   }
 };
 

@@ -1,4 +1,3 @@
-// middlewares/auth.js
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 
@@ -17,7 +16,6 @@ const auth = (req, res, next) => {
     const decodedData = jwt.verify(token, JWT_SECRET);
 
     req.userId = decodedData?.id;
-
     next();
   } catch (error) {
     res.status(401).json({ message: "Invalid or expired token" });
