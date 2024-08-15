@@ -26,18 +26,19 @@ const login = async (
     );
 
     if (response.data && response.data.token) {
-      localStorage.setItem('jwt', response.data.token);
+      const { token, user: userData } = response.data;
+      localStorage.setItem('jwt', token);
+      localStorage.setItem('user', JSON.stringify(userData));
+      const decodedJwt: any = jwtDecode(response.data.token);
 
-      const decodedJwt: any = jwtDecode(response.data.token); 
-      localStorage.setItem('user', JSON.stringify(decodedJwt));
 
-      return { jwt: response.data.token, user: decodedJwt.user };
+      return { jwt: token, user: userData };
     } else {
       throw new Error('Invalid response data');
     }
   } catch (error) {
     console.error('Error during login:', error);
-    throw error; 
+    throw error;
   }
 };
 const logout = (): void => {

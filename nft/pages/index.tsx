@@ -223,76 +223,146 @@ const Home: NextPage = () => {
   };
 
   return (
+    // <div className={styles.container}>
+    //   <Head>
+    //     <title>Cardano Athletics NFT Creator</title>
+    //     <meta name="description" content="Cardano Athletics NFT Creator" />
+    //     <link rel="icon" href="/favicon.ico" />
+    //   </Head>
+
+    //   <main className={styles.main}>
+    //     <h3 className={styles.title}>Cardano Athletics NFT Creator</h3>
+
+    //     <div className={styles.borderwallet}>
+    //       <p>Connect to your wallet</p>
+    //       <p className={styles.borderwallet}>
+    //         <input
+    //           type="radio"
+    //           id="nami"
+    //           name="wallet"
+    //           value="nami"
+    //           onChange={handleWalletSelect}
+    //         />
+    //         <label>Nami</label>
+    //       </p>
+    //       <p className={styles.borderwallet}>
+    //         <input
+    //           type="radio"
+    //           id="eternl"
+    //           name="wallet"
+    //           value="eternl"
+    //           onChange={handleWalletSelect}
+    //         />
+    //         <label>Eternl</label>
+    //       </p>
+    //     </div>
+    //     {!tx.txId && walletIsEnabled && (
+    //       <div className={styles.border}>
+    //         <WalletInfo walletInfo={walletInfo} />
+    //       </div>
+    //     )}
+    //     {tx.txId && (
+    //       <div className={styles.border}>
+    //         <b>Transaction Success!!!</b>
+    //         <p>
+    //           TxId &nbsp;&nbsp;
+    //           <a
+    //             href={"https://preview.cexplorer.io/tx/" + tx.txId}
+    //             target="_blank"
+    //             rel="noopener noreferrer"
+    //           >
+    //             {tx.txId}
+    //           </a>
+    //         </p>
+    //         <p>
+    //           Please wait until the transaction is confirmed on the blockchain
+    //           and reload this page before doing another transaction
+    //         </p>
+    //       </div>
+    //     )}
+    //     {walletIsEnabled && !tx.txId && (
+    //       <div className={styles.border}>
+    //         <MintNFT onMintNFT={mintNFT} />
+    //       </div>
+    //     )}
+    //     {/* Your permanent back button */}
+    //     <a href="http://localhost:3000" className={styles.backButton}>
+    //       Go Back
+    //     </a>
+    //   </main>
+
+    //   <footer className={styles.footer}></footer>
+    // </div>
     <div className={styles.container}>
-      <Head>
-        <title>Cardano Athletics NFT Creator</title>
-        <meta name="description" content="Cardano Athletics NFT Creator" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Head>
+      <title>Cardano Athletics NFT Creator</title>
+      <meta name="description" content="Cardano Athletics NFT Creator" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
 
-      <main className={styles.main}>
-        <h3 className={styles.title}>Cardano Athletics NFT Creator</h3>
+    <main className={styles.main}>
+      <h3 className={styles.title}>Cardano Athletics NFT Creator</h3>
 
-        <div className={styles.borderwallet}>
-          <p>Connect to your wallet</p>
-          <p className={styles.borderwallet}>
-            <input
-              type="radio"
-              id="nami"
-              name="wallet"
-              value="nami"
-              onChange={handleWalletSelect}
-            />
-            <label>Nami</label>
+      <div className={styles.borderwallet}>
+        <p>Connect to your wallet</p>
+        <p className={styles.borderwallet}>
+          <input
+            type="radio"
+            id="nami"
+            name="wallet"
+            value="nami"
+            onChange={handleWalletSelect}
+          />
+          <label>Nami</label>
+        </p>
+        <p className={styles.borderwallet}>
+          <input
+            type="radio"
+            id="eternl"
+            name="wallet"
+            value="eternl"
+            onChange={handleWalletSelect}
+          />
+          <label>Eternl</label>
+        </p>
+      </div>
+      {!tx.txId && walletIsEnabled && (
+        <div className={styles.border}>
+          <WalletInfo walletInfo={walletInfo} />
+        </div>
+      )}
+      {tx.txId && (
+        <div className={styles.border}>
+          <b>Transaction Success!!!</b>
+          <p>
+            TxId &nbsp;&nbsp;
+            <a
+              href={"https://preview.cexplorer.io/tx/" + tx.txId}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {tx.txId}
+            </a>
           </p>
-          <p className={styles.borderwallet}>
-            <input
-              type="radio"
-              id="eternl"
-              name="wallet"
-              value="eternl"
-              onChange={handleWalletSelect}
-            />
-            <label>Eternl</label>
+          <p>
+            Please wait until the transaction is confirmed on the blockchain
+            and reload this page before doing another transaction
           </p>
         </div>
-        {!tx.txId && walletIsEnabled && (
-          <div className={styles.border}>
-            <WalletInfo walletInfo={walletInfo} />
-          </div>
-        )}
-        {tx.txId && (
-          <div className={styles.border}>
-            <b>Transaction Success!!!</b>
-            <p>
-              TxId &nbsp;&nbsp;
-              <a
-                href={"https://preview.cexplorer.io/tx/" + tx.txId}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {tx.txId}
-              </a>
-            </p>
-            <p>
-              Please wait until the transaction is confirmed on the blockchain
-              and reload this page before doing another transaction
-            </p>
-          </div>
-        )}
-        {walletIsEnabled && !tx.txId && (
-          <div className={styles.border}>
-            <MintNFT onMintNFT={mintNFT} />
-          </div>
-        )}
-        {/* Your permanent back button */}
-        <a href="http://localhost:3000" className={styles.backButton}>
-          Go Back
-        </a>
-      </main>
+      )}
+      {walletIsEnabled && !tx.txId && (
+        <div className={styles.border}>
+          <MintNFT onMintNFT={mintNFT} />
+        </div>
+      )}
+      {/* Your permanent back button */}
+      <a href="http://localhost:3000" className={styles.backButton}>
+        Go Back
+      </a>
+    </main>
 
-      <footer className={styles.footer}></footer>
-    </div>
+    <footer className={styles.footer}></footer>
+  </div>
   );
 };
 

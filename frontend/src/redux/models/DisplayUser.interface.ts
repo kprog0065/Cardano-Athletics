@@ -1,5 +1,7 @@
 export interface DisplayUser {
   id: string;
-  name: string;
+  firstName: string | null;
+  lastName: String ;
   email: string;
+  dob: string
 }

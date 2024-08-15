@@ -4,6 +4,7 @@ import Sticky from "react-stickynode";
 import { useAppDispatch } from "../../hooks/redux/hooks";
 import { logout } from "../../redux/features/auth/authSlice";
 
+
 interface NavbarProps {
   mClass?: String;
   nClass?: String;
@@ -109,7 +110,7 @@ const Navbar = ({ mClass, nClass, cClass, slogo, hbtnClass }: NavbarProps) => {
                   <ul className="dropdown-menu">
                     <li className="nav-item">
                       <Link to="/blog" className="nav-link">
-                        Blog List
+                        Under Process
                       </Link>
                     </li>
                   </ul>
@@ -124,17 +125,25 @@ const Navbar = ({ mClass, nClass, cClass, slogo, hbtnClass }: NavbarProps) => {
                   <Link
                     className="btn_get btn_hover"
                     to="http://localhost:8080"
+                    target="blank"
                   >
                     NFT Creator
                   </Link>
                 </li>
+                <li className="dropdown submenu nav-item profile" style={{ paddingTop: "30px", }}>
+                  <Link to="./" title="Player Details" className="avatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></Link>
+                  <ul role="menu" className=" dropdown-menu">
+                    <li className="nav-item"><Link title="Player Skills form" className="nav-link" to='/player-skills-form'>Skills Form</Link></li>
+                    <li className="nav-item"><a className="nav-link" style={{ cursor: "pointer" }} onClick={logoutHandler}>Logout</a></li>
+                  </ul>
+                </li>
               </ul>
-              <a
+              {/* <a
                 className={`btn_get btn_hover ${hbtnClass}`}
                 onClick={logoutHandler}
               >
                 Logout
-              </a>
+              </a> */}
             </div>
           </div>
         </nav>

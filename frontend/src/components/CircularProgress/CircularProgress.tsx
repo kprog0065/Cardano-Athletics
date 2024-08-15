@@ -59,7 +59,7 @@ function FacebookCircularProgress(props: CircularProgressProps) {
 function GradientCircularProgress() {
     return (
         <React.Fragment>
-            <Box sx={{ display: 'flex' , justifyContent:'center', alignItems:'center', height:'100vh'}}>
+            <Box sx={{ display: 'flex' , justifyContent:'center', alignItems:'center', height:'100vh', backgroundColor: 'transparent'}}>
                 <svg width={0} height={0}>
                     <defs>
                         <linearGradient id="my_gradient" x1="0%" y1="0%" x2="0%" y2="100%">

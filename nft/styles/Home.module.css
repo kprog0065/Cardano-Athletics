@@ -153,3 +153,100 @@
     filter: invert(1);
   }
 }
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  background-color: #020230; /* Match background color */
+}
+
+.main {
+  padding: 2rem;
+  background: #1a1a2e; /* Darker background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff; 
+}
+
+.borderwallet, .border {
+  border: 1px solid #fffefe; 
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  background-color: #1a1a2e; 
+  color: #fff;
+}
+
+.backButton {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #f8636b; 
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.backButton:hover {
+  background-color: #e53e3e; 
+}
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+  color: #fff; 
+}
+
+/* Form styles */
+.sub-form-main {
+  margin-top: 1.5rem;
+  color: #fff;
+  font-size: 1.25rem;
+  background-color: #020230; 
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.input[type="radio"] {
+  margin-right: 0.5rem;
+  color: #fff;
+}
+
+.label {
+  margin-right: 1rem;
+  color: #fff; 
+}
+
+.MuiInputLabel-root {
+  color: #fff !important; 
+}
+
+.MuiInputBase-input {
+  color: #fff;
+}
+
+.MuiButton-outlined {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100px;
+  color: #f8636b; /* Match button text color */
+  border-color: #f8636b; /* Match button border color */
+  background-color: transparent;
+}
+
+.MuiButton-outlined:hover {
+  border-color: #e53e3e; /* Darker shade for hover */
+  color: #e53e3e; /* Darker shade for hover */
+}

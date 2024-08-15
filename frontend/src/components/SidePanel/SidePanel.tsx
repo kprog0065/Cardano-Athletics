@@ -3,14 +3,41 @@ import { positonconstants } from "../../constants/constants";
 import { Image } from "react-bootstrap";
 import { getColor } from "../../helper/helper";
 
-function SidePanel() {
+interface DisplayUser {
+  email: string;
+  id: string;
+  firstName: string;
+  lastName: string;
+  dob: string
+}
+interface DisplayUserProps {
+  user: DisplayUser | null
+}
+// utils/ageCalculator.ts
+
+export const calculateAge = (dob: string | any): number => {
+  const birthDate = new Date(dob);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+
+  // Check if the birthday has occurred this year yet
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  return age;
+};
+
+function SidePanel({ user }: DisplayUserProps) {
+
   return (
     <div className="side-panel">
       <div className="player-detail-view">
         <Image src="/Images/man.png" />
         <div style={{ flexDirection: "row", display: "flex", gap: "12px" }}>
           <div className="player-detail-desc">
-            <div className="age">Age: 18</div>
+            <div className="age">Age : {calculateAge(user?.dob)}</div>
             <div className="cm-tx">
               <span className="green-circle-border" />
               CM
@@ -36,8 +63,8 @@ function SidePanel() {
         </div>
       </div>
       <div className="player-detail">
-        <span className="title">Vikram</span>
-        <span className="plan-type">Singh</span>
+        <span className="title">{user?.firstName}</span>
+        <span className="plan-type">{user?.lastName}</span>
       </div>
       <div className="type-detail">
         <span className="title">Plan</span>
@@ -65,9 +92,8 @@ function SidePanel() {
           return (
             <div
               key={index}
-              className={`plan-type-options ${
-                index == 2 ? "plan-type-options-active" : ""
-              }`}
+              className={`plan-type-options ${index == 2 ? "plan-type-options-active" : ""
+                }`}
             >
               <Image src="/Images/green_success_icon.svg" />
               {item.title}

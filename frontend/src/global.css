@@ -14,7 +14,15 @@
   align-items: center;
   position: relative;
 }
-
+.profile{
+  background-image:  url(./img/profile.svg);
+  height: 16px;
+  width: 66px;
+  margin-top: 18px;
+  background-size: cover; /* Makes the image cover the entire area */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-blend-mode: overlay;
+}
 div,
 span {
   color: #fff;
@@ -1164,7 +1172,172 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   background: #00c99c;
   color: #fff;
 }
+/*===========experts_team_area css ==========*/
+.experts_team_area .learn_btn:hover {
+  color: #4069eb;
+}
 
+.experts_team_area .learn_btn:hover:before {
+  background: #4069eb;
+}
+
+.experts_team_area .learn_btn:hover:before {
+  background: #4069eb;
+}
+
+.ex_team_item {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ex_team_item img {
+  max-width: 100%;
+}
+
+.ex_team_item .hover_content, .ex_team_item .team_content {
+  position: absolute;
+  width: 100%;
+}
+
+.ex_team_item h3 {
+  margin-bottom: 3px;
+}
+
+.ex_team_item h5 {
+  font: 300 14px/24px "Poppins", sans-serif;
+  color: #677294;
+  margin-bottom: 0px;
+}
+
+.ex_team_item .team_content {
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 17px 0px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.ex_team_item .hover_content {
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 33px;
+  background-image: -moz-linear-gradient(140deg, rgba(125, 13, 240, 0.9) 0%, rgba(58, 113, 235, 0.9) 100%);
+  background-image: -webkit-linear-gradient(140deg, rgba(125, 13, 240, 0.9) 0%, rgba(58, 113, 235, 0.9) 100%);
+  background-image: -ms-linear-gradient(140deg, rgba(125, 13, 240, 0.9) 0%, rgba(58, 113, 235, 0.9) 100%);
+  background-image: linear-gradient(140deg, rgba(125, 13, 240, 0.9) 0%, rgba(58, 113, 235, 0.9) 100%);
+  opacity: 0;
+  visibility: visible;
+  z-index: -1;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.ex_team_item .hover_content .n_hover_content {
+  width: 100%;
+}
+
+.ex_team_item .hover_content .n_hover_content ul {
+  margin-bottom: 0px;
+}
+
+.ex_team_item .hover_content .n_hover_content ul li {
+  display: inline-block;
+}
+
+.ex_team_item .hover_content .n_hover_content ul li a {
+  font-size: 13px;
+  color: #fff;
+  margin: 0px 5px;
+}
+
+.ex_team_item .hover_content .n_hover_content ul li a:hover {
+  color: #0cb6e7;
+}
+
+.ex_team_item .hover_content .n_hover_content .br {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  display: block;
+  margin: 15px 0px 20px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+
+.ex_team_item .hover_content .n_hover_content h3 {
+  -webkit-transform: translateY(12px);
+  -ms-transform: translateY(12px);
+  transform: translateY(12px);
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.ex_team_item .hover_content .n_hover_content h5 {
+  color: #fff;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+
+.ex_team_item:hover .hover_content {
+  opacity: 1;
+  visibility: visible;
+  z-index: 0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.ex_team_item:hover .hover_content .br {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.ex_team_item:hover .hover_content h3, .ex_team_item:hover .hover_content h5 {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.ex_team_item:hover .team_content {
+  opacity: 0;
+  visibility: visible;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+
+.sec_pad {
+  padding: 120px 0px;
+  background: #020230;
+}
 /*====================================================*/
 /*====================================================*/
 

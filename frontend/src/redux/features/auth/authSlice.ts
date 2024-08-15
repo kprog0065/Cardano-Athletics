@@ -8,7 +8,6 @@ import { RootState } from '../../store';
 import { LoginUser } from '../../models/LoginUser.interface';
 
 const storedUser: string | null = localStorage.getItem('token');
-console.log('Stored user:', storedUser); 
 const user: DisplayUser | null = !!storedUser ? JSON.parse(storedUser) : null;
 
 const storedJwt: string | null = localStorage.getItem('jwt');
