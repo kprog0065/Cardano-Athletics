@@ -19,6 +19,17 @@ Guidelines for contributing to the project.
 ## License
 
 Licensing information.
+
+## Project Commands
+
+backend
+create .env file in the root directory of the backend folder
+env.sample given
+
+docker
+-> docker-compose build
+-> docker-compose up
+
 backend
 -> npm install
 -> npm start
